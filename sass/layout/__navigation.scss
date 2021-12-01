@@ -1,0 +1,32 @@
+.nav {
+  font-size: $font-size-smaller;
+
+  &__ul {
+    display: flex;
+    gap: $spacing-small--1;
+
+    &:first-child {
+      margin-left: $spacing-medium;
+    }
+  }
+
+  &__li {
+    list-style: none;
+  }
+
+  &__link,
+  &__link:link,
+  &__link:active {
+    text-decoration: none;
+    color: var(--color-black-shade--1);
+    padding-bottom: $spacing-small--1;
+
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--color-black-shade--2);
+      border-bottom: 3px solid var(--color-primary);
+    }
+  }
+}

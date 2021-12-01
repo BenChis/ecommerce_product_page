@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; // 1rem === 16px
+  height: 100vh;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0 $spacing-super-big;
+  font-family: $default-font-family;
+  font-weight: 400;
+  height: 100%;
+}

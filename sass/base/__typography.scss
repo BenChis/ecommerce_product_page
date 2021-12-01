@@ -1,0 +1,19 @@
+.sub-heading--3 {
+  font-size: $font-size-smaller;
+  text-transform: uppercase;
+  letter-spacing: 0.5;
+}
+
+.heading {
+  font-weight: 700;
+  &__secondary {
+    font-size: $font-size-heading-2;
+  }
+}
+
+.paragraph {
+  font-size: $font-size-paragraph;
+
+  &--1 {
+  }
+}

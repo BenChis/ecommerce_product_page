@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- Font Families -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Ecommerce Product Landing Page</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <img
+          src="./images/logo.svg"
+          alt="Company logo"
+          class="header__logo-image"
+        />
+      </div>
+
+      <nav class="nav header__nav">
+        <ul class="nav__ul">
+          <li class="nav__li">
+            <a href="#" class="nav__link">Collections</a>
+          </li>
+          <li class="nav__li">
+            <a href="" class="nav__link">Men</a>
+          </li>
+          <li class="nav__li">
+            <a href="#" class="nav__link">Woman</a>
+          </li>
+          <li class="nav__li">
+            <a href="#" class="nav__link">About</a>
+          </li>
+          <li class="nav__li">
+            <a href="#" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="header__checkout">
+        <div class="header__icon-container">
+          <img
+            src="./images/icon-cart.svg"
+            alt="Cart icon"
+            class="checkout__icon"
+          />
+        </div>
+        <img
+          src="./images/image-avatar.png"
+          alt="Profil picture for logged-in user"
+          class="checkout__avater-img"
+        />
+      </div>
+    </header>
+
+    <main class="container">
+      <div class="product-cards__img">
+        <figure
+          class="product-cards__img-overlay-container product-cards__img-big"
+        >
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+        <figure
+          class="
+            product-cards__img-small
+            product-cards__img-small--1
+            product-cards__img-overlay-container
+          "
+        >
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+        <figure
+          class="
+            product-cards__img-small
+            product-cards__img-small--2
+            product-cards__img-overlay-container
+          "
+        >
+          <img
+            src="./images/image-product-2.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+        <figure
+          class="
+            product-cards__img-small
+            product-cards__img-small--3
+            product-cards__img-overlay-container
+          "
+        >
+          <img
+            src="./images/image-product-3.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+        <figure
+          class="
+            product-cards__img-small
+            product-cards__img-small--4
+            product-cards__img-overlay-container
+          "
+        >
+          <img
+            src="./images/image-product-4.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+      </div>
+
+      <div class="product-cards__details">
+        <h3 class="sub-heading--3">Sneaker Company</h3>
+        <h2 class="heading heading__secondary">
+          Fall Limited Edidition Sneakers
+        </h2>
+        <p class="paragraph paragraph--1">
+          These low-profile sneakers are your perfect casual wear compansion.
+          Featuring a durable rubber outer sole, they'll withstand everything
+          the weater can offer.
+        </p>
+        <p class="product-cards__price">
+          $125.00
+          <span class="product-cards__sale">50%</span>
+        </p>
+        <button class="btn btn-secondary">
+          <img
+            src="./images/icon-minus.svg"
+            alt="Icon to delete item"
+            class="btn__icon-minus"
+          />
+          0
+          <img
+            src="./images/icon-plus.svg"
+            alt="Icon to delete item"
+            class="btn__icon-plus"
+          />
+        </button>
+        <button class="btn btn-primary">
+          <img
+            src="./images/icon-cart.svg"
+            alt="Cart icon to add to shopping cart"
+            class="btn__cart-icon"
+          />
+          Add to cart
+        </button>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100% - 8.199rem);
+  // 100% from the body minus the header height
+  align-items: center;
+  //   padding: $spacing-big $spacing-big 0 $spacing-big;
+  gap: $spacing-big;
+
+  .product-cards__img {
+    flex-basis: 40%;
+  }
+  .product-cards__details {
+    background-color: crimson;
+    flex-basis: 40%;
+  }
+}
