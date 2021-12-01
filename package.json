@@ -1,0 +1,32 @@
+{
+  "name": "ecommerce-product-page",
+  "version": "1.0.0",
+  "description": "Frontend mentor challenge for a product page",
+  "main": "index.js",
+  "devDependencies": {
+    "autoprefixer": "^10.4.0",
+    "concat": "^1.0.3",
+    "node-sass": "^6.0.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^9.0.2"
+  },
+  "scripts": {
+    "watch:sass": "node-sass SASS/main.scss CSS/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "concat:css": "concat:css -o css/style.concat.css icon? css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixier -b 'last 10 versions' css/style.concat.css -o css/stlye.prefix.css",
+    "compress:css": "node-sass css/style.prefix.css csss/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenChis/ecommerce_product_page.git"
+  },
+  "author": "benjamin scharf",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenChis/ecommerce_product_page"
+  },
+  "homepage": "https://github.com/BenChis/ecommerce_product_page#readme"
+}
