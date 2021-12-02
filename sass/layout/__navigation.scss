@@ -1,6 +1,10 @@
 .nav {
   font-size: $default-font-size-smaller;
 
+  @include respond(mobile-big) {
+    display: none;
+  }
+
   &__ul {
     display: flex;
     gap: $spacing-small--1;
@@ -19,7 +23,7 @@
   &__link:visited {
     text-decoration: none;
     color: var(--color-black-shade--1);
-    padding-bottom: $spacing-small--1;
+    padding-bottom: $spacing-medium;
 
     cursor: pointer;
     transition: all 0.3s;

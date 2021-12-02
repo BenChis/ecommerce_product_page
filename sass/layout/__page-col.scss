@@ -2,16 +2,35 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: calc(100% - 8.199rem);
+  height: calc(100% - 12rem);
   // 100% from the body minus the header height
   align-items: center;
   //   padding: $spacing-big $spacing-big 0 $spacing-big;
-  gap: $spacing-big;
+  gap: $spacing-bigger;
+
+  @include respond(mobile-big) {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  @include respond(mobile-big) {
+    height: auto;
+  }
 
   .product-cards__img {
     flex-basis: 40%;
+
+    @include respond(mobile-big) {
+      flex-basis: auto;
+    }
   }
   .product-cards__details {
     flex-basis: 45%;
+
+    @include respond(mobile-big) {
+      flex-basis: auto;
+      justify-content: flex-start;
+      align-items: center;
+    }
   }
 }

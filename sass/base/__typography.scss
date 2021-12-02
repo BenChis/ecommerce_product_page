@@ -1,5 +1,9 @@
+.sub-heading--2 {
+  color: var(--color-black-shade--2);
+}
+
 .sub-heading--3 {
-  font-size: $default-font-size;
+  font-size: $default-font-size-smaller--1;
   text-transform: uppercase;
   //   font-weight: $font-weight-normal;
   color: var(--color-primary);
@@ -22,7 +26,7 @@
 }
 
 .paragraph {
-  font-size: $default-font-size;
+  font-size: $default-font-size-smaller;
   line-height: $line-height-default;
   color: var(--color-black-shade--1);
 

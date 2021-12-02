@@ -1,0 +1,29 @@
+.img-gallery {
+  display: none;
+  height: 25vh;
+  position: relative;
+
+  &__icon-container {
+    position: absolute;
+  }
+
+  @include respond(mobile-big) {
+    display: block;
+  }
+
+  .img-gallery__img--1 {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .img-gallery__img--2,
+  .img-gallery__img--3,
+  .img-gallery__img--4 {
+    display: none;
+  }
+  .img-gallery__img {
+    height: 100%;
+    width: 100%;
+  }
+}

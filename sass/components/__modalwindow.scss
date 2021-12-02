@@ -1,0 +1,114 @@
+.modal-window-container {
+  position: absolute;
+  width: calc(100vw + 16rem);
+  height: 100vh;
+  left: -16rem;
+  background-color: rgba($--color-lightbox-bk, 0.8);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .product-cards__img {
+    display: grid;
+    grid-template-columns: 2rem repeat(4, 1fr) 2rem;
+    grid-template-rows: 67vh 8rem;
+    row-gap: 3rem;
+    column-gap: 3rem;
+
+    &-small--1 {
+      grid-column: 2 / 3;
+    }
+  }
+
+  .modal-window {
+    margin-right: -16rem;
+    position: relative;
+
+    &__icon-container {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: white;
+      padding: 2rem;
+
+      &--previous {
+        top: 50%;
+        left: 0;
+        transform: translate(-50%, -50%);
+      }
+
+      &--next {
+        top: 50%;
+        right: 0;
+        transform: translate(50%, -51%);
+      }
+    }
+
+    &__icon-close {
+      position: absolute;
+      width: 2rem;
+      height: 2rem;
+    }
+
+    &__icon-previous,
+    &__icon-next {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      cursor: pointer;
+    }
+
+    &__icon-close {
+      right: 0;
+      top: -4rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      fill: var(--color-black-shade--1);
+
+      &:hover {
+        fill: var(--color-primary);
+      }
+    }
+
+    &__icon-next {
+      stroke: var(--color-black-shade--2);
+      transform: translateX(1px);
+
+      transition: all 0.3s;
+
+      &:hover {
+        stroke: var(--color-primary);
+      }
+    }
+
+    &__icon-previous {
+      stroke: var(--color-black-shade--2);
+      transition: all 0.3s;
+      transform: translateX(-1px);
+
+      &:hover {
+        stroke: var(--color-primary);
+      }
+    }
+
+    &__big-img-container {
+      overflow: visible;
+    }
+
+    &__big-img-container > :nth-child(2) {
+      // height: 120%;
+
+      &:hover {
+        transform: scale(1);
+        cursor: default;
+      }
+    }
+  }
+  &--hidden {
+    visibility: hidden;
+    height: 0;
+  }
+}

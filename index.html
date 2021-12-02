@@ -28,23 +28,45 @@
     <!--  -->
     <!-- MODAL WINDOW START -->
     <!--  -->
-    <div class="modal-window-container">
-      <div class="product-cards__img modal-window modal-window--active">
+    <div class="modal-window-container modal-window-container--hidden">
+      <div class="product-cards__img modal-window modal-window">
         <figure
           class="
             product-cards__img-overlay-container product-cards__img-big
             modal-window__big-img-container
           "
         >
-          <svg class="modal-window__close-icon">
-            <use xlink:href="./images/"
+          <svg class="modal-window__icon-close">
+            <use xlink:href="./images/sprite.svg#icon-close"></use>
           </svg>
+
           <img
             src="./images/image-product-1.jpg"
             alt="Product for shoes"
             class="product-img product-img--big"
           />
+
+          <div
+            class="
+              modal-window__icon-container
+              modal-window__icon-container--previous
+            "
+          >
+            <svg class="modal-window__icon-previous">
+              <use xlink:href="./images/sprite.svg#icon-previous"></use>
+            </svg>
+          </div>
+          <div
+            class="
+              modal-window__icon-container modal-window__icon-container--next
+            "
+          >
+            <svg class="modal-window__icon-next">
+              <use xlink:href="./images/sprite.svg#icon-next"></use>
+            </svg>
+          </div>
         </figure>
+
         <figure
           class="
             product-cards__img-small
@@ -107,13 +129,12 @@
     <!--  -->
     <!-- MODAL WINDOW END -->
     <!--  -->
+
     <header class="header">
       <div class="header__logo">
-        <img
-          src="./images/logo.svg"
-          alt="Company logo"
-          class="header__logo-image"
-        />
+        <svg class="header__logo-svg">
+          <use xlink:href="./images/sprite.svg#logo"></use>
+        </svg>
       </div>
 
       <nav class="nav header__nav">
@@ -138,11 +159,9 @@
 
       <div class="header__checkout">
         <div class="header__icon-container">
-          <img
-            src="./images/icon-cart.svg"
-            alt="Cart icon"
-            class="checkout__icon"
-          />
+          <svg class="checkout__icon">
+            <use xlink:href="./images/sprite.svg#icon-cart"></use>
+          </svg>
         </div>
         <img
           src="./images/image-avatar.png"
@@ -150,19 +169,148 @@
           class="checkout__avater-img"
         />
       </div>
+
+      <!--  -->
+      <!-- MODAL CART WINDOW START -->
+      <!--  -->
+      <div class="modal-cart-container modal-cart-container--hidden">
+        <h3
+          class="
+            modal-cart-container__heading
+            sub-heading--2
+            u-margin-bottom-small
+          "
+        >
+          Cart
+        </h3>
+
+        <div class="product-items-container u-margin-bottom-small">
+          <figure class="product-img">
+            <img
+              src="./images/image-product-1-thumbnail.jpg"
+              alt="Product image in cart"
+              class="product-img__img"
+            />
+          </figure>
+          <p class="product-name">Autumn Limited Edition Sneakers</p>
+          <p class="product-price">
+            $125.00 x <span class="product-amount">3</span>
+            <span class="product-price__total"><strong>$375.00</strong></span>
+          </p>
+
+          <img
+            src="./images/icon-delete.svg"
+            alt="Icon to delete"
+            class="product-icon__bin"
+          />
+        </div>
+
+        <button
+          class="btn btn-primary product-checkout-button u-margin-bottom-small"
+        >
+          Checkout
+        </button>
+      </div>
+      <!--  -->
+      <!-- MODAL CART WINDOW END -->
+      <!--  -->
     </header>
 
     <main class="container">
+      <!--  -->
+      <!-- MOBILE GALLERY START -->
+      <!--  -->
+      <div class="img-gallery">
+        <div
+          class="
+            img-gallery__icon-container img-gallery__icon-container--previous
+          "
+        >
+          <svg class="img-gallery__icon-previous">
+            <use xlink:href="./images/sprite.svg#icon-previous"></use>
+          </svg>
+        </div>
+
+        <figure class="img-gallery__img--1">
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product for shoes"
+            class="img-gallery__img"
+          />
+        </figure>
+
+        <figure class="img-gallery__img--2">
+          <img
+            src="./images/image-product-2.jpg"
+            alt="Product for shoes"
+            class="img-gallery__img"
+          />
+        </figure>
+
+        <figure class="img-gallery__img--3">
+          <img
+            src="./images/image-product-3.jpg"
+            alt="Product for shoes"
+            class="img-gallery__img"
+          />
+        </figure>
+
+        <figure class="img-gallery__img--4">
+          <img
+            src="./images/image-product-4.jpg"
+            alt="Product for shoes"
+            class="img-gallery__img"
+          />
+        </figure>
+
+        <div
+          class="
+            modal-window__icon-container modal-window__icon-container--next
+          "
+        >
+          <svg class="modal-window__icon-next">
+            <use xlink:href="./images/sprite.svg#icon-next"></use>
+          </svg>
+        </div>
+      </div>
+      <!--  -->
+      <!-- MOBILE GALLERY   END -->
+      <!--  -->
+
       <div class="product-cards__img">
         <figure
-          class="product-cards__img-overlay-container product-cards__img-big"
+          class="
+            product-cards__img-overlay-container product-cards__img-big
+            modal-window__big-img-container
+          "
         >
           <img
             src="./images/image-product-1.jpg"
             alt="Product for shoes"
             class="product-img product-img--big"
           />
+
+          <div
+            class="
+              modal-window__icon-container
+              modal-window__icon-container--previous
+            "
+          >
+            <svg class="modal-window__icon-previous">
+              <use xlink:href="./images/sprite.svg#icon-previous"></use>
+            </svg>
+          </div>
+          <div
+            class="
+              modal-window__icon-container modal-window__icon-container--next
+            "
+          >
+            <svg class="modal-window__icon-next">
+              <use xlink:href="./images/sprite.svg#icon-next"></use>
+            </svg>
+          </div>
         </figure>
+
         <figure
           class="
             product-cards__img-small
@@ -223,8 +371,8 @@
       </div>
 
       <div class="product-cards__details">
-        <h3 class="sub-heading--3 u-margin-bottom-smallest">Sneaker Company</h3>
-        <h1 class="heading heading__primary u-margin-bottom-small">
+        <h3 class="sub-heading--3 u-margin-bottom-small">Sneaker Company</h3>
+        <h1 class="heading heading__primary u-margin-bottom-small--1">
           Fall Limited Edition Sneakers
         </h1>
         <p class="paragraph paragraph--1 u-margin-bottom-small">
@@ -238,31 +386,26 @@
           <span
             class="
               product-cards__details-price--sale-amount
-              u-margin-bottom-small
+              u-margin-bottom-small--1
             "
             >$250.00</span
           >
         </p>
         <div class="btn-container">
           <button class="btn btn-secondary">
-            <img
-              src="./images/icon-minus.svg"
-              alt="Icon to delete item"
-              class="btn__icon-minus"
-            />
+            <svg class="btn__icon-minus">
+              <use xlink:href="./images/sprite.svg#icon-minus"></use>
+            </svg>
+
             0
-            <img
-              src="./images/icon-plus.svg"
-              alt="Icon to delete item"
-              class="btn__icon-plus"
-            />
+            <svg class="btn__icon-plus">
+              <use xlink:href="./images/sprite.svg#icon-plus"></use>
+            </svg>
           </button>
           <button class="btn btn-primary">
-            <img
-              src="./images/icon-cart.svg"
-              alt="Cart icon to add to shopping cart"
-              class="btn__cart-icon"
-            />
+            <svg class="btn__cart-icon">
+              <use xlink:href="./images/sprite.svg#icon-cart"></use>
+            </svg>
             Add to cart
           </button>
         </div>

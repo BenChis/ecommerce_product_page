@@ -2,13 +2,14 @@
   display: grid;
   grid-template-columns: min-content 1fr min-content min-content;
   align-items: center;
-  padding: $spacing-small 0;
+  padding: $spacing-small--1 0;
   //   background-color: darkgray;
   border-bottom: 2px solid var(--color-black-tint--1);
+  position: relative;
 
-  &__logo {
-    display: block;
-    height: 2rem;
+  &__logo-svg {
+    width: 11rem;
+    height: 3.5rem;
 
     &-image {
       height: 100%;
@@ -30,6 +31,17 @@
 
     .header__icon-container {
       position: relative;
+
+      .checkout__icon {
+        height: 2rem;
+        width: 2rem;
+        fill: var(--color-black-shade--1);
+        transition: all 0.3s;
+
+        &:hover {
+          fill: var(--color-black-shade--2);
+        }
+      }
 
       &::after {
         content: '3';

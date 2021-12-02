@@ -7,7 +7,18 @@
 }
 
 html {
-  font-size: 62.5%; // 1rem === 16px
+  font-size: 62.5%; // 1rem === 10px
+
+  @include respond(tab-land-big) {
+    font-size: 50%;
+    // 1 rem === 8px;
+  }
+
+  @include respond(mobile-big) {
+    font-size: 37.5%;
+    // 1 rem === 6px;
+  }
+
   height: 100vh;
 }
 
@@ -17,5 +28,18 @@ body {
   font-family: $default-font-family;
   font-weight: 400;
   height: 100%;
+  width: 100%;
   overflow: hidden;
+
+  @include respond(tab-land-big) {
+    padding: 0 $spacing-big;
+  }
+
+  @include respond(tab-land-medium) {
+    padding: 0 $spacing-medium;
+  }
+
+  @include respond(mobile-big) {
+    padding: 0;
+  }
 }
