@@ -25,6 +25,88 @@
     <title>Ecommerce Product Landing Page</title>
   </head>
   <body>
+    <!--  -->
+    <!-- MODAL WINDOW START -->
+    <!--  -->
+    <div class="modal-window-container">
+      <div class="product-cards__img modal-window modal-window--active">
+        <figure
+          class="
+            product-cards__img-overlay-container product-cards__img-big
+            modal-window__big-img-container
+          "
+        >
+          <svg class="modal-window__close-icon">
+            <use xlink:href="./images/"
+          </svg>
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product for shoes"
+            class="product-img product-img--big"
+          />
+        </figure>
+        <figure
+          class="
+            product-cards__img-small
+            product-cards__img-small--1
+            product-cards__img-overlay-container
+            product-cards__img-small--active
+          "
+        >
+          <img
+            src="./images/image-product-1.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+        <figure
+          class="
+            product-cards__img-small
+            product-cards__img-small--2
+            product-cards__img-overlay-container
+          "
+        >
+          <img
+            src="./images/image-product-2.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+        <figure
+          class="
+            product-cards__img-small
+            product-cards__img-small--3
+            product-cards__img-overlay-container
+          "
+        >
+          <img
+            src="./images/image-product-3.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+        <figure
+          class="
+            product-cards__img-small
+            product-cards__img-small--4
+            product-cards__img-overlay-container
+          "
+        >
+          <img
+            src="./images/image-product-4.jpg"
+            alt="Product for shoes"
+            class="product-img"
+          />
+          <div class="product-cards__img-overlay"></div>
+        </figure>
+      </div>
+    </div>
+    <!--  -->
+    <!-- MODAL WINDOW END -->
+    <!--  -->
     <header class="header">
       <div class="header__logo">
         <img
@@ -78,15 +160,15 @@
           <img
             src="./images/image-product-1.jpg"
             alt="Product for shoes"
-            class="product-img"
+            class="product-img product-img--big"
           />
-          <div class="product-cards__img-overlay"></div>
         </figure>
         <figure
           class="
             product-cards__img-small
             product-cards__img-small--1
             product-cards__img-overlay-container
+            product-cards__img-small--active
           "
         >
           <img
@@ -141,40 +223,49 @@
       </div>
 
       <div class="product-cards__details">
-        <h3 class="sub-heading--3">Sneaker Company</h3>
-        <h2 class="heading heading__secondary">
-          Fall Limited Edidition Sneakers
-        </h2>
-        <p class="paragraph paragraph--1">
+        <h3 class="sub-heading--3 u-margin-bottom-smallest">Sneaker Company</h3>
+        <h1 class="heading heading__primary u-margin-bottom-small">
+          Fall Limited Edition Sneakers
+        </h1>
+        <p class="paragraph paragraph--1 u-margin-bottom-small">
           These low-profile sneakers are your perfect casual wear compansion.
           Featuring a durable rubber outer sole, they'll withstand everything
           the weater can offer.
         </p>
-        <p class="product-cards__price">
+        <p class="product-cards__details-price">
           $125.00
-          <span class="product-cards__sale">50%</span>
+          <span class="product-cards__details-price--sale-percentage">50%</span>
+          <span
+            class="
+              product-cards__details-price--sale-amount
+              u-margin-bottom-small
+            "
+            >$250.00</span
+          >
         </p>
-        <button class="btn btn-secondary">
-          <img
-            src="./images/icon-minus.svg"
-            alt="Icon to delete item"
-            class="btn__icon-minus"
-          />
-          0
-          <img
-            src="./images/icon-plus.svg"
-            alt="Icon to delete item"
-            class="btn__icon-plus"
-          />
-        </button>
-        <button class="btn btn-primary">
-          <img
-            src="./images/icon-cart.svg"
-            alt="Cart icon to add to shopping cart"
-            class="btn__cart-icon"
-          />
-          Add to cart
-        </button>
+        <div class="btn-container">
+          <button class="btn btn-secondary">
+            <img
+              src="./images/icon-minus.svg"
+              alt="Icon to delete item"
+              class="btn__icon-minus"
+            />
+            0
+            <img
+              src="./images/icon-plus.svg"
+              alt="Icon to delete item"
+              class="btn__icon-plus"
+            />
+          </button>
+          <button class="btn btn-primary">
+            <img
+              src="./images/icon-cart.svg"
+              alt="Cart icon to add to shopping cart"
+              class="btn__cart-icon"
+            />
+            Add to cart
+          </button>
+        </div>
       </div>
     </main>
   </body>

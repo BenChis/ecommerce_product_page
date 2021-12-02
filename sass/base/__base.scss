@@ -13,8 +13,9 @@ html {
 
 body {
   box-sizing: border-box;
-  margin: 0 $spacing-super-big;
+  padding: 0 $spacing-super-big;
   font-family: $default-font-family;
   font-weight: 400;
   height: 100%;
+  overflow: hidden;
 }

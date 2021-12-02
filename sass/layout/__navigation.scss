@@ -1,5 +1,5 @@
 .nav {
-  font-size: $font-size-smaller;
+  font-size: $default-font-size-smaller;
 
   &__ul {
     display: flex;
@@ -16,7 +16,7 @@
 
   &__link,
   &__link:link,
-  &__link:active {
+  &__link:visited {
     text-decoration: none;
     color: var(--color-black-shade--1);
     padding-bottom: $spacing-small--1;
@@ -24,7 +24,8 @@
     cursor: pointer;
     transition: all 0.3s;
 
-    &:hover {
+    &:hover,
+    &:active {
       color: var(--color-black-shade--2);
       border-bottom: 3px solid var(--color-primary);
     }

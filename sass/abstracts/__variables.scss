@@ -10,22 +10,35 @@
   --color-black-tint--1: #f7f8fd;
   --color-white: #ffffff;
 
-  --color-lighbox-bk: #000000;
+  --color-lightbox-bk: #000000;
 }
+
+$--color-primary: #ff7d1a;
+$--color-lightbox-bk: #000000;
 
 ///////////////////////////
 //FONT
 
-$font-size-smaller: 1.4rem;
-
-$font-size-paragraph: 1.2rem;
-
+$default-font-size-smallest: 1.2rem;
+$default-font-size-smaller: 1.4rem;
 $default-font-size: 1.6rem;
+$default-font-size-bigger: 2rem;
 
 $font-size-heading-1: 4.8rem;
 $font-size-heading-2: 3.1rem;
+
+//FONT WEIGHT
 $font-weight-normal: 400;
 $font-weight-bold: 700;
+
+///////////////////////////
+// LETTER / WORD SPACING/   LINE-HEIGHT
+
+$letter-spacing-default: 0.1rem;
+
+$line-height-default: 2.5rem;
+$line-height-heading-1: 4.6rem;
+$line-height-heading-2: 3.5rem;
 
 ///////////////////////////
 //FONT-FAMILY
@@ -35,6 +48,7 @@ $default-font-family: 'Kumbh Sans', sans-serif;
 /////////////////////////////
 //SPACING
 
+$spacing-smallest: 1rem;
 $spacing-small: 2rem;
 $spacing-small--1: 3rem;
 $spacing-medium: 4rem;
@@ -45,6 +59,7 @@ $spacing-super-big: 16rem;
 // Border
 
 $default-border-radius: 1rem;
+$default-border-radius-smaller: 0.5rem;
 
 ////////////////////////////////
 // Heights

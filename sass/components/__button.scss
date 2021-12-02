@@ -1,0 +1,64 @@
+.btn-container {
+  display: flex;
+  gap: 1rem;
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    text-decoration: none;
+    border: none;
+    border-radius: $default-border-radius-smaller;
+    cursor: pointer;
+    display: inline-block;
+    height: 4.5rem;
+  }
+
+  .btn-primary {
+    background-color: var(--color-primary);
+    box-shadow: 0 0.5rem 1rem rgba($--color-primary, 0.2);
+    color: var(--color-white);
+    flex-grow: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-3px);
+      filter: brightness(1.3);
+      box-shadow: 0 2rem 3rem rgba($--color-primary, 0.4);
+    }
+
+    &:active,
+    &:focus {
+      transform: translateY(-1px);
+      box-shadow: 0 1rem 2rem rgba($--color-primary, 0.4);
+    }
+
+    .btn__cart-icon {
+      filter: brightness(100);
+      height: 1rem;
+    }
+  }
+
+  .btn-secondary {
+    background-color: var(--color-black-tint--1);
+    color: var(--color-black-shade--2);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-grow: 3;
+    transition: all 0.3s;
+
+    .btn__icon-plus:hover,
+    .btn__icon-minus:hover,
+    .btn__icon-plus:active,
+    .btn__icon-minus:active,
+    .btn__icon-plus:focus,
+    .btn__icon-minus:focus {
+      filter: brightness(1.5);
+      transform: scale(1.1);
+    }
+  }
+}
