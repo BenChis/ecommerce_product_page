@@ -1,10 +1,26 @@
 .img-gallery {
   display: none;
-  height: 25vh;
+  // height: 40vh;
+  flex: 100%;
+  flex-shrink: 1;
   position: relative;
 
   &__icon-container {
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
     position: absolute;
+    top: 50%;
+    left: 2rem;
+    transform: translateY(-50%);
+  }
+
+  &__icon-previous {
+    height: 1.5rem;
   }
 
   @include respond(mobile-big) {
@@ -25,5 +41,22 @@
   .img-gallery__img {
     height: 100%;
     width: 100%;
+  }
+
+  &__icon-container-next {
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+    width: 4rem;
+    position: absolute;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+  }
+  &__icon-next {
+    height: 1.5rem;
   }
 }

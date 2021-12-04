@@ -7,6 +7,27 @@
   border-bottom: 2px solid var(--color-black-tint--1);
   position: relative;
 
+  @include respond(mobile-big) {
+    padding: $spacing-smallest 0;
+
+    column-gap: $spacing-small;
+  }
+
+  &__menu {
+    display: none;
+
+    margin-left: $spacing-small;
+
+    &-icon {
+      display: block;
+      height: 1.5rem;
+    }
+
+    @include respond(mobile-big) {
+      display: block;
+    }
+  }
+
   &__logo-svg {
     width: 11rem;
     height: 3.5rem;
@@ -23,6 +44,10 @@
     display: flex;
     align-items: center;
     gap: $spacing-medium;
+
+    @include respond(mobile-big) {
+      gap: $spacing-small;
+    }
 
     & > [class^='checkout__'],
     [class^='header__icon'] {
@@ -63,6 +88,10 @@
     height: 4rem;
     border-radius: 50%;
     transition: box-shadow 0.4s;
+
+    @include respond(mobile-big) {
+      height: 2.5rem;
+    }
 
     &:hover {
       box-shadow: 0 0 0 2px var(--color-primary);

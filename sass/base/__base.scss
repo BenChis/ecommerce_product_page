@@ -14,10 +14,10 @@ html {
     // 1 rem === 8px;
   }
 
-  @include respond(mobile-big) {
-    font-size: 37.5%;
-    // 1 rem === 6px;
-  }
+  // @include respond(mobile-big) {
+  //   font-size: 37.5%;
+  //   // 1 rem === 6px;
+  // }
 
   height: 100vh;
 }
@@ -32,10 +32,6 @@ body {
   overflow: hidden;
 
   @include respond(tab-land-big) {
-    padding: 0 $spacing-big;
-  }
-
-  @include respond(tab-land-medium) {
     padding: 0 $spacing-medium;
   }
 

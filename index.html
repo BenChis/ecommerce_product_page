@@ -131,6 +131,13 @@
     <!--  -->
 
     <header class="header">
+
+      <div class="header__menu">
+        <img src="./images/icon-menu.svg" class="header__menu-icon">
+
+        </img>
+      </div>
+
       <div class="header__logo">
         <svg class="header__logo-svg">
           <use xlink:href="./images/sprite.svg#logo"></use>
@@ -226,9 +233,11 @@
             img-gallery__icon-container img-gallery__icon-container--previous
           "
         >
-          <svg class="img-gallery__icon-previous">
-            <use xlink:href="./images/sprite.svg#icon-previous"></use>
-          </svg>
+          <img
+            src="./images/icon-previous.svg"
+            alt="icon to go to the previous picture"
+            class="img-gallery__icon-next"
+          />
         </div>
 
         <figure class="img-gallery__img--1">
@@ -263,14 +272,12 @@
           />
         </figure>
 
-        <div
-          class="
-            modal-window__icon-container modal-window__icon-container--next
-          "
-        >
-          <svg class="modal-window__icon-next">
-            <use xlink:href="./images/sprite.svg#icon-next"></use>
-          </svg>
+        <div class="img-gallery__icon-container-next">
+          <img
+            src="./images/icon-next.svg"
+            alt="icon to go to the next picture"
+            class="img-gallery__icon-next"
+          />
         </div>
       </div>
       <!--  -->

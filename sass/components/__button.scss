@@ -1,6 +1,10 @@
 .btn-container {
   display: flex;
   gap: 1rem;
+
+  @include respond(mobile-big) {
+    flex-direction: column;
+  }
 }
 .btn,
 .btn:link,

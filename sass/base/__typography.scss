@@ -17,6 +17,10 @@
   &__primary {
     font-size: $font-size-heading-1;
     line-height: $line-height-heading-1;
+    @include respond(mobile-big) {
+      font-size: $font-size-heading-1--mobile;
+      // line-height: $line-height-heading-1--mobile;
+    }
   }
 
   &__secondary {
