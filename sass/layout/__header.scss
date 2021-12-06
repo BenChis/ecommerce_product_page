@@ -61,15 +61,16 @@
         height: 2rem;
         width: 2rem;
         fill: var(--color-black-shade--1);
-        transition: all 0.3s;
+        // transition: all 0.3s;
+        transition: transform 0.8s cubic-bezier(0.76, 0.14, 0.28, 0.92),
+          hover 0.3s;
 
         &:hover {
           fill: var(--color-black-shade--2);
         }
       }
 
-      &::after {
-        content: '3';
+      .checkout__icon-product-amount {
         display: block;
         font-size: 0.7rem;
         padding: 0.09rem 0.6rem;
@@ -80,6 +81,14 @@
         top: -0.3rem;
         right: -0.3rem;
         z-index: 2;
+        animation-name: bounce;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-delay: 1s;
+
+        &--hidden {
+          opacity: 0;
+        }
       }
     }
   }

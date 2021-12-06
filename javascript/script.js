@@ -47,6 +47,12 @@ const closeIconNav = document.querySelector('.close-icon-nav');
 const cartModalContainer = document.querySelector('.modal-cart-container');
 
 const imgIconCart = document.querySelector('.checkout__icon');
+
+// checkout cart product amount icon
+const productAmountIcon = document.querySelector(
+  '.checkout__icon-product-amount'
+);
+
 const imgAvatarCart = document.querySelector('.checkout__avater-img');
 
 // Shopping Cart functionality
@@ -379,6 +385,12 @@ primaryBtnAdding.addEventListener('click', function (e) {
     checkoutBtnPresent = true;
   }
 
+  // adding product amount btn
+
+  console.log(productAmountIcon);
+  productAmountIcon.classList.remove('checkout__icon-product-amount--hidden');
+  productAmountIcon.textContent = curAmount;
+
   // Deleting Items
 
   const deleteBin = document.querySelector('.product-icon__bin');
@@ -394,15 +406,8 @@ primaryBtnAdding.addEventListener('click', function (e) {
       'afterbegin',
       `<p class="product-cart__empty">Your cart is empty</p>`
     );
+    productAmountIcon.classList.add('checkout__icon-product-amount--hidden');
   });
 
   btnSecondaryAmount.textContent = 0;
 });
-
-document.querySelector('.checkout__icon');
-
-const span = window
-  .getComputedStyle(document.querySelector('.checkout__icon'), '::after')
-  .getPropertyValue('content');
-
-console.log(span);

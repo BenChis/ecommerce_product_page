@@ -33,36 +33,6 @@
   --color-white: #ffffff;
   --color-lightbox-bk: #000000; }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(-0.6rem); }
-  25% {
-    transform: translateY(0.1rem); }
-  50% {
-    transform: translateY(-0.2rem); }
-  100% {
-    transform: translateY(0); } }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem) rotate(0deg); }
-  80% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  80% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
 *,
 *::before,
 *::after {
@@ -545,10 +515,11 @@ body {
         height: 2rem;
         width: 2rem;
         fill: var(--color-black-shade--1);
-        transition: transform 0.8s cubic-bezier(0.76, 0.14, 0.28, 0.92), hover 0.3s; }
+        transition: all 0.3s; }
         .header__checkout .header__icon-container .checkout__icon:hover {
           fill: var(--color-black-shade--2); }
-      .header__checkout .header__icon-container .checkout__icon-product-amount {
+      .header__checkout .header__icon-container::after {
+        content: '3';
         display: block;
         font-size: 0.7rem;
         padding: 0.09rem 0.6rem;
@@ -558,13 +529,7 @@ body {
         color: var(--color-white);
         top: -0.3rem;
         right: -0.3rem;
-        z-index: 2;
-        animation-name: bounce;
-        animation-duration: 3s;
-        animation-iteration-count: infinite;
-        animation-delay: 1s; }
-        .header__checkout .header__icon-container .checkout__icon-product-amount--hidden {
-          opacity: 0; }
+        z-index: 2; }
   .header .checkout__avater-img {
     height: 4rem;
     border-radius: 50%;
