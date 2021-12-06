@@ -67,7 +67,15 @@ const productPrice = parseInt(
   document.querySelector('.product-price').textContent
 );
 
-// Cart modal window
+// mobile gallery
+
+const mobileIconNext = document.querySelector('.img-gallery__icon-next');
+const mobileIconPrevious = document.querySelector(
+  '.img-gallery__icon-previous'
+);
+const slideImages = document.querySelectorAll('.img-gallery-slide');
+
+const maxSlideImages = slideImages.length;
 
 /////////////////////////////////////////
 // FUNCTIONALITY FOR OPENING AND CLOSING THE MODAL WINDOW
@@ -253,6 +261,31 @@ imgIconCart.addEventListener('click', openCartModal);
 imgAvatarCart.addEventListener('click', openCartModal);
 
 /////////////////////////////////////////
+// Mobile Gallery Funtionality
+
+let curSlide = 0;
+
+mobileIconNext.addEventListener('click', function (e) {
+  // In case slider is on index of 3 return
+  if (curSlide === 3) return;
+
+  slideImages[curSlide].classList.toggle('slide-hidden');
+
+  curSlide++;
+  slideImages[curSlide].classList.toggle('slide-hidden');
+});
+
+mobileIconPrevious.addEventListener('click', function (e) {
+  // In case slider is on index on 0 return
+  if (curSlide === 0) return;
+
+  slideImages[curSlide].classList.toggle('slide-hidden');
+
+  curSlide--;
+  slideImages[curSlide].classList.toggle('slide-hidden');
+});
+
+/////////////////////////////////////////
 // Cart functionality
 
 // Product Amount
@@ -291,7 +324,8 @@ const options = {
 const productPriceIntl = new Intl.NumberFormat('en-US', options).format(
   productPrice
 );
-console.log(typeof productPriceIntl);
+
+// Adding to Cart
 
 primaryBtnAdding.addEventListener('click', function (e) {
   // If current amount is 0 add nothing to the card
@@ -361,6 +395,8 @@ primaryBtnAdding.addEventListener('click', function (e) {
       `<p class="product-cart__empty">Your cart is empty</p>`
     );
   });
+
+  btnSecondaryAmount.textContent = 0;
 });
 
 document.querySelector('.checkout__icon');

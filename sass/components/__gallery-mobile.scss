@@ -4,7 +4,7 @@
   flex: 100%;
   flex-shrink: 1;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 
   &__icon-container {
     background-color: white;
@@ -22,6 +22,8 @@
 
   &__icon-previous {
     height: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
   }
 
   @include respond(mobile-big) {
@@ -34,11 +36,12 @@
     height: 100%;
   }
 
-  .img-gallery__img--2,
-  .img-gallery__img--3,
-  .img-gallery__img--4 {
-    display: none;
+  .slide-hidden {
+    opacity: 0;
+    height: 0;
+    position: absolute;
   }
+
   .img-gallery__img {
     height: 100%;
     width: 100%;
@@ -59,5 +62,7 @@
   }
   &__icon-next {
     height: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
   }
 }

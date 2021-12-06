@@ -17,6 +17,9 @@
 
   &-overlay-container {
     position: relative;
+    @include respond(mobile-big) {
+      display: none;
+    }
 
     &:hover .product-cards__img-overlay {
       opacity: 0.3;
