@@ -1,11 +1,15 @@
 .modal-cart-container {
   position: absolute;
-  top: 7rem;
+  top: 8rem;
   right: 0;
+  min-width: 32rem;
+  min-height: 25rem;
+
   font-size: $default-font-size;
-  background-color: white;
+  background-color: var(--color-white);
+  border-radius: $default-border-radius;
   box-shadow: 0 1rem 2rem 1rem rgba($--color-lightbox-bk, 0.09);
-  transition: all 0.3s ease-in;
+  transition: all 0.2s;
 
   &__heading {
     padding: 2rem;
@@ -24,6 +28,20 @@
 
     @include respond(mobile-big) {
       display: none;
+    }
+
+    .product-cart__empty {
+      position: absolute;
+      // left: 50%;
+      // top: 50%;
+      // transform: translate(-50%, -50%);
+      font-weight: $font-weight-bold;
+      color: var(--color-black-shade--1);
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      justify-self: center;
+      align-self: center;
+      margin-top: 6rem;
     }
 
     .product-img {
@@ -76,9 +94,9 @@
     margin-right: auto;
     margin-left: auto;
   }
-  &--hidden {
-    visibility: hidden;
-    height: 0;
-    top: 0;
-  }
+}
+.modal-cart-container--hidden {
+  visibility: hidden;
+  height: 0;
+  top: 0;
 }

@@ -22,9 +22,39 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script defer src="./javascript/script.js"></script>
     <title>Ecommerce Product Landing Page</title>
   </head>
   <body>
+
+    <!-- mobile navigation start -->
+    <div class="mobile-nav__overlay mobile-nav--hidden ">
+    <nav class="nav-mobile">
+      <ul class="nav-mobile__ul">
+
+        <div class="close-icon-container__nav">
+          <img src="./images/icon-close.svg" alt="Icon to close the navigation" class="close-icon-nav">
+        </div>
+
+        <li class="nav-mobile__li">
+          <a href="#" class="nav-mobile__link">Collections</a>
+        </li>
+        <li class="nav-mobile__li">
+          <a href="" class="nav-mobile__link">Men</a>
+        </li>
+        <li class="nav-mobile__li">
+          <a href="#" class="nav-mobile__link">Woman</a>
+        </li>
+        <li class="nav-mobile__li">
+          <a href="#" class="nav-mobile__link">About</a>
+        </li>
+        <li class="nav-mobile__li">
+          <a href="#" class="nav-mobile__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+<!-- mobile navigation end -->
     <!--  -->
     <!-- MODAL WINDOW START -->
     <!--  -->
@@ -36,7 +66,7 @@
             modal-window__big-img-container
           "
         >
-          <svg class="modal-window__icon-close">
+          <svg class="modal-window__icon-close" id="icon-close">
             <use xlink:href="./images/sprite.svg#icon-close"></use>
           </svg>
 
@@ -164,6 +194,9 @@
         </ul>
       </nav>
 
+
+
+
       <div class="header__checkout">
         <div class="header__icon-container">
           <svg class="checkout__icon">
@@ -188,11 +221,13 @@
             u-margin-bottom-small
           "
         >
-          Cart
-        </h3>
+        Cart
+      </h3>
+      
+      <div class="product-items-container u-margin-bottom-small">
+          <p class="product-cart__empty">Your cart is empty</p>
 
-        <div class="product-items-container u-margin-bottom-small">
-          <figure class="product-img">
+           <!-- <figure class="product-img">
             <img
               src="./images/image-product-1-thumbnail.jpg"
               alt="Product image in cart"
@@ -209,14 +244,15 @@
             src="./images/icon-delete.svg"
             alt="Icon to delete"
             class="product-icon__bin"
-          />
+          />  -->
         </div>
 
-        <button
+        <!-- <button
           class="btn btn-primary product-checkout-button u-margin-bottom-small"
         >
           Checkout
-        </button>
+        </button> -->
+        
       </div>
       <!--  -->
       <!-- MODAL CART WINDOW END -->
@@ -287,35 +323,15 @@
       <div class="product-cards__img">
         <figure
           class="
-            product-cards__img-overlay-container product-cards__img-big
-            modal-window__big-img-container
+          product-cards__img-overlay-container product-cards__img-big
           "
         >
           <img
             src="./images/image-product-1.jpg"
             alt="Product for shoes"
-            class="product-img product-img--big"
+            class="product-img product-img--big product-img--main"
           />
 
-          <div
-            class="
-              modal-window__icon-container
-              modal-window__icon-container--previous
-            "
-          >
-            <svg class="modal-window__icon-previous">
-              <use xlink:href="./images/sprite.svg#icon-previous"></use>
-            </svg>
-          </div>
-          <div
-            class="
-              modal-window__icon-container modal-window__icon-container--next
-            "
-          >
-            <svg class="modal-window__icon-next">
-              <use xlink:href="./images/sprite.svg#icon-next"></use>
-            </svg>
-          </div>
         </figure>
 
         <figure
@@ -388,7 +404,7 @@
           the weater can offer.
         </p>
         <p class="product-cards__details-price">
-          $125.00
+          $<span class="product-price">125.00</span>
           <span class="product-cards__details-price--sale-percentage">50%</span>
           <span
             class="
@@ -404,12 +420,12 @@
               <use xlink:href="./images/sprite.svg#icon-minus"></use>
             </svg>
 
-            0
+            <span class="btn-secondary__amount">0</span>
             <svg class="btn__icon-plus">
               <use xlink:href="./images/sprite.svg#icon-plus"></use>
             </svg>
           </button>
-          <button class="btn btn-primary">
+          <button class="btn btn-primary btn-cart-input">
             <svg class="btn__cart-icon">
               <use xlink:href="./images/sprite.svg#icon-cart"></use>
             </svg>

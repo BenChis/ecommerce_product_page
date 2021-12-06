@@ -8,6 +8,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.2s ease-in;
+  backface-visibility: hidden;
 
   .product-cards__img {
     display: grid;
@@ -110,5 +112,7 @@
   &--hidden {
     visibility: hidden;
     height: 0;
+    bottom: -1rem;
+    right: 0;
   }
 }
