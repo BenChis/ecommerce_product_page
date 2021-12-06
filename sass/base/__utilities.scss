@@ -3,9 +3,17 @@
 }
 .u-margin-bottom-small {
   margin-bottom: $spacing-small;
+
+  @include respond(mobile-big) {
+    margin-bottom: $spacing-small;
+  }
 }
 .u-margin-bottom-small--1 {
   margin-bottom: $spacing-small--1;
+
+  @include respond(mobile-big) {
+    margin-bottom: $spacing-small;
+  }
 }
 .u-margin-bottom-medium {
   margin-bottom: $spacing-medium;

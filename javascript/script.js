@@ -80,11 +80,6 @@ const closeModal = function () {
   modalWindow.classList.add('modal-window-container--hidden');
 };
 
-// console.log(modalWindow);
-console.log(bigProductImg);
-
-console.log(iconClose);
-
 bigProductImg.addEventListener('click', openModal);
 
 // document.addEventListener('keydown', function (e) {
@@ -217,6 +212,9 @@ iconNext.addEventListener('click', function (e) {
 
 iconPrevious.addEventListener('click', function (e) {
   if (currentNumber > 0) {
+    // Prevent the current number to be 0
+    if (currentNumber === 1) return;
+
     currentNumber--;
     bigImg(currentNumber);
 
@@ -284,10 +282,26 @@ minusIcon.addEventListener('click', decreaseAmount);
 // Checking if the current button is on the page by default it is false
 let checkoutBtnPresent = false;
 
+// Intl for Currency formating
+const options = {
+  style: 'currency',
+  currency: 'USD',
+};
+
+const productPriceIntl = new Intl.NumberFormat('en-US', options).format(
+  productPrice
+);
+console.log(typeof productPriceIntl);
+
 primaryBtnAdding.addEventListener('click', function (e) {
+  // If current amount is 0 add nothing to the card
+  if (curAmount === 0) return;
+
   cartModalContainer.classList.remove('modal-cart-container--hidden');
 
   cartContainer.textContent = '';
+
+  // Creating the Product Markup
   cartContainer.insertAdjacentHTML(
     'afterbegin',
     `
@@ -300,10 +314,13 @@ primaryBtnAdding.addEventListener('click', function (e) {
 </figure>
 <p class="product-name">Autumn Limited Edition Sneakers</p>
 <p class="product-price">
-  ${productPrice} x <span class="product-amount">${curAmount}</span>
-  <span class="product-price__total"><strong>$${
-    productPrice * curAmount
-  }</strong></span>
+  ${new Intl.NumberFormat('en-US', options).format(
+    productPrice.toFixed(2)
+  )} x <span class="product-amount">${curAmount}</span>
+  <span class="product-price__total"><strong>${new Intl.NumberFormat(
+    'en-US',
+    options
+  ).format((productPrice * curAmount).toFixed(2))}</strong></span>
 </p>
 
 <img
@@ -327,9 +344,24 @@ primaryBtnAdding.addEventListener('click', function (e) {
     // Setting the checkout btn present  to true, so next time the btn gets not insereted again
     checkoutBtnPresent = true;
   }
-});
 
-console.log(productPrice);
+  // Deleting Items
+
+  const deleteBin = document.querySelector('.product-icon__bin');
+
+  deleteBin.addEventListener('click', function (e) {
+    cartContainer.textContent = '';
+    cartModalContainer.removeChild(
+      document.querySelector('.product-checkout-button')
+    );
+    checkoutBtnPresent = false;
+
+    cartContainer.insertAdjacentHTML(
+      'afterbegin',
+      `<p class="product-cart__empty">Your cart is empty</p>`
+    );
+  });
+});
 
 document.querySelector('.checkout__icon');
 

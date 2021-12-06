@@ -3,6 +3,7 @@
   width: calc(100vw + 16rem);
   height: 100vh;
   left: -16rem;
+  top: 0;
   background-color: rgba($--color-lightbox-bk, 0.8);
   z-index: 9999;
   display: flex;
@@ -110,9 +111,7 @@
     }
   }
   &--hidden {
-    visibility: hidden;
+    opacity: 0;
     height: 0;
-    bottom: -1rem;
-    right: 0;
   }
 }

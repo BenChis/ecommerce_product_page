@@ -4,6 +4,7 @@
   flex: 100%;
   flex-shrink: 1;
   position: relative;
+  z-index: -1;
 
   &__icon-container {
     background-color: white;

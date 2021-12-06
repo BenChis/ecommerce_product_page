@@ -49,7 +49,7 @@
     object-fit: cover;
     display: block;
     border-radius: $default-border-radius;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s;
 
     &--big {
       transition: transform 0.4s;
@@ -80,17 +80,6 @@
 .product-cards__details {
   @include respond(mobile-big) {
     padding: $spacing-small;
-
-    & :nth-child(1),
-    & :nth-child(2) {
-      margin-bottom: $spacing-smallest;
-    }
-    & :nth-child(3) {
-      margin-bottom: $spacing-small--1;
-    }
-    & :nth-child(4) {
-      margin-bottom: $spacing-small;
-    }
   }
 
   &-price {
@@ -101,6 +90,11 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 0.5rem;
+
+    @include respond(mobile-big) {
+      flex-wrap: nowrap;
+      margin-bottom: $spacing-small--1;
+    }
 
     &--sale-percentage {
       color: var(--color-primary);
@@ -120,6 +114,12 @@
       color: var(--color-black-neutral);
       flex-basis: 100%;
       text-decoration: line-through;
+
+      @include respond(mobile-big) {
+        flex-basis: auto;
+        justify-self: flex-end;
+        margin-bottom: 0;
+      }
     }
   }
 }
