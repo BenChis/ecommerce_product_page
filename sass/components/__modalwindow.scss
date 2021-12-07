@@ -27,6 +27,7 @@
   .modal-window {
     margin-right: -16rem;
     position: relative;
+    // height: 0;
 
     &__icon-container {
       position: absolute;
@@ -111,6 +112,7 @@
     }
   }
   &--hidden {
+    visibility: hidden;
     opacity: 0;
     height: 0;
   }

@@ -14,7 +14,7 @@
   border-radius: $default-border-radius-smaller;
   cursor: pointer;
   display: inline-block;
-  height: 5rem;
+  height: 5.5rem;
 }
 
 .btn-primary {
@@ -60,8 +60,8 @@
 
   .btn__icon-plus,
   .btn__icon-minus {
-    height: 1rem;
-    width: 1rem;
+    height: 1.5rem;
+    width: 1.5rem;
 
     &:hover {
       transform: scale(1.1);
