@@ -1,9 +1,6 @@
 # E-commerce product page
 
-<video width="320" height="240" controls>
-  <source src="./images/Preview_Video.mov" type="video/mp4">
-</video>
-![](./images/Preview_Video.mov)
+![video](./images/Preview_Video.mov)
 
 ![Design preview for the E-commerce product page coding challenge](./images/Preview/Product_Page.png)
 
