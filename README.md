@@ -1,7 +1,5 @@
 # E-commerce product page
 
-![video](./images/preview-video_IgJt6yC2.mp4)
-
 ![Design preview for the E-commerce product page coding challenge](./images/Preview/Product_Page.png)
 ![Design preview for the E-commerce product page coding challenge](./images/Preview/Mobile_Version.png)
 
